@@ -19,9 +19,10 @@ Please follow the instructions below and fill in the information requested when 
 # Build/Run Instructions
 
 ## Build Instructions
-1. steps here
-2. steps here
+1. git clone https://github.com/csc317-sp21/csc317-termproject-melissah717.git
+2. cd csc317-termproject-melissah717/application
+3. npm install
+
 
 ## Run Instructions
-1. steps here
-2. steps here 
+1. npm start 
