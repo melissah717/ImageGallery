@@ -1,0 +1,39 @@
+body{
+    background-color: darkgrey;
+    background-image: url(catmask.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+h1 {
+    text-align: center;
+    font-size: 4em;
+    color:rgb(8, 33, 82);
+    margin-top: .5em;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+.desc {
+    text-align: center;
+    font-size: 20px;
+    color:white;
+    margin: auto;
+    border: 5px solid white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.dateTime{
+    text-align: center;
+    font-size: 12px;
+    color: darkslateblue;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.picture{
+    border:rgb(8, 33, 82);
+    border-style: double;
+    border-width: 2em;
+    align-items: center;
+    text-align: center;
+    
+}
+
