@@ -3,11 +3,11 @@
         <header>
             <h1>Register</h1>
         </header>
-        <form>
+        <form method="POST" action="/users/register" enctype="application/x-www-form-urlencoded">
             <fieldset>
                 
             <label for="username">Username:</label>
-            <input id ="username" type="text" placeholder="Username" required>
+            <input id ="username" type="text" placeholder="Username" required name="username">
             <br/>
             <div class="check">Username must start with <span id="user-req1" class="req">a character
                 ([a-zA-Z]).</span></div>
@@ -16,12 +16,12 @@
             <br/>
 
             <label for="email">Email:</label>
-            <input id ="email" type="email" placeholder="Email" required>
+            <input id ="email" type="email" placeholder="Email" required name="email">
             <br/>
             <div class="check">Email must be <span id="email-req" class="req">valid.</span></div>
             <br/>
             <label for="password">Password:</label>
-            <input id="password" type="password" placeholder="Password" required>
+            <input id="password" type="password" placeholder="Password" required name="password">
             <br/>
             <div class="check">Password must be <span id="pass-req1" class="req">8 or more characters.</span>
             </div>
@@ -30,7 +30,7 @@
             </div>
             <br/>
             <label for="confirm">Confirm Password:</label>
-            <input id="confirm-pass" type="password" placeholder="Confirm your password" required>
+            <input id="cpassword" type="password" placeholder="Confirm your password" required name="cpassword">
             <br/>
             <div class="check">Passwords must <span id="confirm-pass-req" class="req">match.</span></div>
             <br/>

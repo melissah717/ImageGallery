@@ -8,9 +8,11 @@ class UserError extends Error{
     getMessage(){
         return this.message;
     }
-    getRedirectUrl(){
-        return this.getRedirectUrl;
+
+    getRedirectURL(){
+        return this.redirectURL;
     }
+    
     getStatus(){
         return this.status;
     }

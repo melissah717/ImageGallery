@@ -11,7 +11,6 @@ function populateGallery(title, img, id){
     );
 }
 
-console.log('success');
 async function loadPictures(){
      try{
         var response = await axios.get('https://jsonplaceholder.typicode.com/albums/2/photos'); //grabs API  

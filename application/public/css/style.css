@@ -1,49 +1,61 @@
 body{
-    background-image: url("strawberrycake.jpg");
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-attachment: fixed;
-    background-color: rgb(245, 245, 245)
+    background-color: #f8c6ca;
+    text-align:center;
 }
 h1{
     margin: 10px;
-    font-size:45px;
-    font-family:'arial';
-    font-variant: small-caps;
-    color: rgb(250, 7, 47);
+    font-size:44px;
+    font-family:'Arial';
+    color: #630030;
     opacity: 80%;
 
 }
+
+h2{
+    font-size: 12px;
+    font-family: Arial;
+    color:rgba(31, 28, 28, 0.8);
+    text-align:center;
+}
 form {
+    top:50%;
+    bottom: 50%;
     max-width: fit-content;
-    border:3px double black;
-    font-size: 24px;
-    font-family:'Times';
-    color:rgb(250, 7, 47);
-    padding: 5px;
+    border:5px double rgb(255, 252, 252);
+    border-radius: 10px;
+    font-size: 14px;
+    font-family:'Arial';
+    color:rgb(116, 109, 110);
+    padding: 14px;
+    opacity: 100%;
+    background: rgba(255, 235, 232, 0.5);
+    display: inline-block;
+}
+.input{
+    text-align: center;
 }
 .description{
     font-size: 20px;
-    font-family:'arial';
-    color:rgb(250, 7, 47);
+    font-family:'Arial';
+    color:#630030;
 
 }
 .dateTime{
     font-size: 20px;
     font-family:'arial';
-    color: rgb(250, 7, 47);
+    color: #630030;
 
 }
 #username{
     padding: 2px;
-    margin: 0px 0px 2px 82px;
+    margin: 0px 0px 2px 89px;
 }
 #email{
     margin: 0px 0px 2px 122px;
 }
 #password{
     padding: 2px;
-    margin: 0px 0px 2px 88px;
+    margin: 0px 0px 2px 93px;
 }
 
 #title{
@@ -51,12 +63,49 @@ form {
 }
 
 #description{
-    margin: 0px 0px 5px 63px;
+    margin: 0px 0px 5px 64px;
 }
 
 .check{
     color: rgb(100, 100, 100);
-    font-size: 18px;
+    font-size: 12px;
+}
+
+#post-button{
+    font-size: 16px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:#630030;
+    margin: 2px;
+    padding: 2px;
+}
+
+
+#brand-anchor{
+    text-decoration: none;
+    font-size: 16px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 2px;
+    padding: 2px;
+}
+
+#logout-button{
+    text-decoration: none;
+    font-size: 16px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 2px;
+    padding: 2px;
+}
+
+#login-button{
+    text-decoration: none;
+    font-size: 16px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 2px;
+    padding: 2px;
+}
+
+#search-text{
+    width: 55vw;
 }
 
 .grid-container {
@@ -82,13 +131,24 @@ form {
     grid-area:auto;
 }
 
+#flash-message{
+    position:fixed;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%,0);
+}
+
+#flash-message  div{
+    text-align: center;
+}
+
 .item{
     border:rgb(144, 142, 142) solid 1px;
     width:200px;
     padding:20px;
     text-align:center;
     justify-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial;
     font-size: 16px;
     font-variant: small-caps;
     color:rgb(250, 7, 47)
@@ -112,21 +172,24 @@ form {
 }
 
 #count{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial;
     color:rgb(250, 7, 47);
     text-align: center;
 }
 
 .logo{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size:x-large;
+    font-family: Arial;
+    font-size:48px;
     text-align: center;
 }
 
 #footer{
-    text-align: left;
+    text-align: center;
     font-size: small;
-    font-variant:small-caps;
+    font-family: Arial;
+    font-variant: small-caps;
+    padding: 10px;
+    color:#630030;
 }
 
 #header{
@@ -136,9 +199,31 @@ form {
 }
 
 #banner{
-    text-align: center;
-    font-size: 48px;
-    font-family: arial;
-    font-variant: small-caps;
-    color:rgb(250, 7, 47);
+    background-image:url('banner.png');
+    text-align:center;
+    width: auto;
+    background-repeat:no-repeat;
+    background-position: center;
+    height: 209px;
+
 }
+
+.nav-items{
+    text-decoration: none;
+    color:#630030;
+}
+
+#brand-text{
+    text-decoration: none;
+    color:#630030;
+}
+
+button{
+    margin: 4px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/* .link{
+    margin: 4px;
+} */

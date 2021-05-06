@@ -9,7 +9,7 @@ class PostError extends Error{
         return this.message;
     }
     getRedirectUrl(){
-        return this.getRedirectUrl;
+        return this.redirectURL;
     }
     getStatus(){
         return this.status;

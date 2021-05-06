@@ -62,7 +62,7 @@ password.onchange = function () {
     }
 }
 
-let passwordConfirm = document.getElementById("confirm-pass");
+let passwordConfirm = document.getElementById("cpassword");
 passwordConfirm.onchange = function () {
     let cPassReq = document.getElementById('confirm-pass-req');
     let passInput = password.value;
