@@ -2,10 +2,12 @@
     <div id="brand" class="nav-items">
         <a href="/" id="brand-anchor"><span id="brand-text" style="margin-right: .2rem;">Go Home</span></a>
     </div>
-    <input id="search-text" name="search-text" type="text">
-    {{!-- <div id="text-bar-icon">
-        <i id="sicon" class="fas fa-search nav-items"></i>
-    </div> --}}
+    <div id="search-container">
+        <section id="search-bar">
+            <input type="text" placeholder="Search.." id="search-text" name="search-text">
+            <button type="button" id="search-button">Search<i class="fas fa-search" aria-hidden="true"></i></button>
+        </section>
+    </div>
     <button><a href="/postimage" id="post-button" class="nav-items anchor-buttons">Post an image</a></button>
 
     {{#if logged}}

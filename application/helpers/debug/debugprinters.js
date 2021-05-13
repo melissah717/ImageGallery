@@ -1,9 +1,9 @@
 const colors = require('colors');
 
 colors.setTheme({
-    error:['black', 'bgRed'],
-    success:['black', 'bgGreen'],
-    request:['black', 'bgWhite']
+    error: ['black', 'bgRed'],
+    success: ['black', 'bgGreen'],
+    request: ['black', 'bgWhite']
 })
 
 const printers = {

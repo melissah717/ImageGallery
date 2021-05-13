@@ -18,28 +18,18 @@ h2{
     text-align:center;
 }
 form {
-    top:50%;
-    bottom: 50%;
-    max-width: fit-content;
+    font-family: 'Arial';
+    color:rgb(116, 109, 110);
+    font-size: 14px;
     border:5px double rgb(255, 252, 252);
     border-radius: 10px;
-    font-size: 14px;
-    font-family:'Arial';
-    color:rgb(116, 109, 110);
-    padding: 14px;
     opacity: 100%;
     background: rgba(255, 235, 232, 0.5);
     display: inline-block;
-}
-.input{
-    text-align: center;
-}
-.description{
-    font-size: 20px;
-    font-family:'Arial';
-    color:#630030;
+    padding: 12px;
 
 }
+
 .dateTime{
     font-size: 20px;
     font-family:'arial';
@@ -58,12 +48,16 @@ form {
     margin: 0px 0px 2px 93px;
 }
 
-#title{
-    margin: 0px 0px 2px 109px;
-}
+/* #post-title{
+    margin: 0px 0px 2px 0px;
+} */
 
-#description{
-    margin: 0px 0px 5px 64px;
+#post-description{
+    padding: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#630030;
+    font-size: 12px;
+
 }
 
 .check{
@@ -106,70 +100,41 @@ form {
 
 #search-text{
     width: 55vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.grid-container {
-    border:rgb(100, 100, 100) solid 2px;
-    display: grid;
-    margin: 20px auto auto auto;
-    /* grid-row: auto;
-    grid-column: auto; */
-    gap: .15rem;
-    grid-auto-rows: 20px 1fr;
-    grid-auto-columns: 1fr;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 120px 1fr 1fr 1fr;
-    grid-template-areas: 
-    "header header header header"
-    "container container container container"
-    "container container container container"
-    "container container container container";
+
+p.card-text{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #630030;
+    font-size: 16px ;
 }
 
-.container{
-    display: grid;
-    grid-area:auto;
+p.card-title{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #630030;
+    font-size: 24px;
 }
+            
 
 #flash-message{
-    position:fixed;
+    position:absolute;
     left: 50%;
-    top: 25%;
+    top: 18%;
     transform: translate(-50%,0);
+    z-index: 9999;
+
 }
 
 #flash-message  div{
     text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-style: italic;
+    color: #630030;
+
 }
 
-.item{
-    border:rgb(144, 142, 142) solid 1px;
-    width:200px;
-    padding:20px;
-    text-align:center;
-    justify-items: center;
-    font-family: Arial;
-    font-size: 16px;
-    font-variant: small-caps;
-    color:rgb(250, 7, 47)
-}
-
-.imagegrid{
-    padding-top: .25em;
-    padding-bottom: .25em;
-    display: grid;
-    gap: .2rem .2rem;
-    justify-items: center;
-    text-align: center;
-    grid-auto-rows: 1fr;
-    grid-auto-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: 
-    "item item item item"
-    "item item item item"
-    "item item item item";
-}
 
 #count{
     font-family: Arial;
@@ -185,10 +150,9 @@ form {
 
 #footer{
     text-align: center;
-    font-size: small;
-    font-family: Arial;
-    font-variant: small-caps;
-    padding: 10px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 12px;
     color:#630030;
 }
 
@@ -223,7 +187,196 @@ button{
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
+#search-button{
+    width:10%;
+    font-size: 16px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 0px;
+    padding: 0px;
+    color:#630030;
+}
 
-/* .link{
-    margin: 4px;
-} */
+.card{
+    padding: 1rem;
+    border: 6px double #9e7488;
+    margin: 5px;
+}
+
+.anchor-buttons{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+div[id=post-info] > p {
+    margin-bottom: 0.2em;
+}
+
+div[post-container] > div[id^=post-]{
+    flex-grow:1;
+    flex-shrink:1;
+}
+
+div[post-container] > imd[id^=post-]{
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+#comment-container{
+    display:grid;
+    justify-self: stretch;
+    grid-area: comments;
+    grid-template-rows: auto 80px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "messages"
+    "comment-box";
+    max-height: 80vh;
+}
+
+#messages{
+    grid-area: messages;
+    overflow-y: auto;
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    scroll-behavior: smooth;
+    border-radius: .25rem;
+    justify-self: left;
+    align-items: center;
+    border: 0.5px solid rgb(138, 130, 130);
+    box-shadow: -1px 1px 2px 2px rgb(179, 178, 178);
+    width: 100%;
+    grid-template-areas:
+    "author created"
+    "comment comment";
+}
+
+div[id^=message-]{
+    width: 98%;
+    display: grid;
+    grid-template-rows: 0.3fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: .2em;
+    padding: .25rem;
+    margin: .2rem;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #630030;
+    border: 1px solid #e0e0e0;
+    grid-template-areas: 
+    "author created"
+    "comment comment";
+}
+
+#comment-box{
+    grid-area: comment-box;
+    display: flex;
+    padding: .2rem;
+    border-radius: 0.35rem;
+}
+
+#comment-box-button{
+    padding: 0.25rem;
+    margin: 0.25rem;
+    line-height: 2;
+    color: #630030;
+    font-size: 1.5rem;
+    width: 15%;
+    height: 90%;
+    border-radius: 0.35rem;
+    cursor: pointer;
+}
+
+#posted-user{
+    font-size: 16px;
+    font-family:Arial;
+    margin: 0px;
+    padding: 2px;
+    color:#630030;
+}
+
+#posted-time{
+    font-size: 14px;
+    font-family:Arial;
+    margin: 0px;
+    padding: 2px;
+    color:#630030;
+}
+
+.image-title{
+    font-size: 40px;
+    font-family:Arial, Helvetica, sans-serif;
+    align-items: left;
+    padding: 10px;
+    color:#630030;
+}
+
+#post-image{
+    max-width: 25vw;
+    max-height: 80vh;
+    grid-area: photoinfo;
+    align-self:center;
+}
+.author-text{
+    grid-area: author;
+    justify-self:start;
+    color: #630030;
+}
+
+.comment-text{
+    grid-area: comment;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    max-height: 50px;
+    min-height: 50px;
+    justify-self: start;
+
+} 
+
+.date-posted{
+    grid-area: created;
+    justify-self: end;
+
+}
+
+#comment-box-text{
+    /* height:auto;
+    width: 1400px;
+    flex-grow: 8;
+    padding: 0.25rem;
+    margin: 0.25rem;
+    border: 0.05rem solid #630030;
+    border-radius: 0.35rem;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #630030;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align:left; */
+    width: 85%;
+
+}
+
+#post-container{
+    grid-area: content;
+    padding-top: .35em;
+    justify-self: center;
+    padding-bottom: .35em;
+    display: grid;
+    grid-gap: .2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "photoinfo comments"
+
+}
+
+#photo-container{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    grid-area: photoinfo;
+}
+
+#post-info{
+    display: inline-block;
+    vertical-align: middle;
+}

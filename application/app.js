@@ -9,41 +9,36 @@ var flash = require('express-flash');
 var handlebars = require('express-handlebars');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-//var usersRouter = require('./routes/dbtest');
-var dbRouter = require('./routes/dbtest');
-
+var postRouter = require('./routes/posts');
+var commentRouter = require('./routes/comments');
 var errorPrint = require('./helpers/debug/debugprinters').errorPrint;
 var requestPrint = require('./helpers/debug/debugprinters').requestPrint;
+
 var app = express();
 
 app.engine(
-    "hbs", 
+    "hbs",
     handlebars({
         layoutsDir: path.join(__dirname, "views/layouts"),
         partialsDir: path.join(__dirname, "views/partials"),
         extname: ".hbs",
-        defaultLayout: "home",
+        defaultLayout: "body",
         helpers: {
             emptyObject: (obj) => {
-                return !(obj.constructor === Object && Object.keys(obj).length == 0)
+                return !(obj.constructor === Object && Object.keys(obj).length == 0);
             }
-        },
+        }
     })
 );
 
-var mysqlSessionStore = new mysqlSession({
-    /**using default options */
-    },
-    require('./config/database')
-);
-
+var mysqlSessionStore = new mysqlSession({/* using default */ }, require('./config/database'));
 app.use(sessions({
     key: "csid",
     secret: "meow",
     store: mysqlSessionStore,
-    resave: false, 
+    resave: false,
     saveUninitialized: false
-}));
+}))
 
 app.use(flash());
 app.set("view engine", "hbs");
@@ -56,24 +51,24 @@ app.use("/public", express.static(path.join(__dirname, 'public')));
 
 app.use((req, res, next) => {
     requestPrint(req.url);
-    next(); //safe for middleware functions
-});
-
-app.use((req, res, next) => {
-    console.log(req.session);
-    if(req.session.username){
-        res.locals.logged = true;
-    }
     next();
 });
 
+app.use((req, res, next) => {
+    if (req.session.username) {
+        res.locals.logged = true;
+    }
+    next();
+})
+
 app.use('/', indexRouter);
-//app.use('/dbtest', dbRouter);
-app.use('/users', usersRouter);  
+app.use('/users', usersRouter);
+app.use('/posts', postRouter);
+app.use('/comments', commentRouter);
 
 app.use((err, req, res, next) => {
     console.log(err);
-    res.render('error', {err_message: err});
-}); //error middleware because 4 parameters and first is err
+    res.render('error', { err_message: err });
+})
 
 module.exports = app;

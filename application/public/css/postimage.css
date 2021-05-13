@@ -1,0 +1,37 @@
+#title-label{
+    font-family: 'Arial';
+    color:rgb(116, 109, 110);
+    font-size: 14px;
+    padding-left: 45px;
+    padding-bottom: 10px;
+}
+
+#description-label{
+    font-family: 'Arial';
+    color:rgb(116, 109, 110);
+    font-size: 14px;
+}
+
+#upload-label{
+    font-size: 16px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:#630030;
+}
+
+#upload-image{
+    font-size: 12px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:#630030;
+}
+
+#aup-agreement{
+    font-family: 'Arial';
+    color:rgb(116, 109, 110);
+    font-size: 14px;
+}
+
+#post-image-submit{
+    font-size: 12px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:#630030;
+}

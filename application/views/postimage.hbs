@@ -1,23 +1,50 @@
 <body>
+    <link rel="stylesheet" type="text/css" href="/public/css/postimage.css">
     <div>
         <header>
             <h1>Upload an image</h1>
         </header>
-        <form>
-                <label>Title: </label>
-                <input id="title" type="text" placeholder="title" required>
-                <br/>
-                <label>Description: </label>
-                <input id="description" type="text" placeholder="description" required>
-                <br/>
-                <label>Choose image to upload: </label>
-                <input id="upload-image" type="file">
-                <br/>
-                <input id="agreement" type="checkbox">
-                by checking this you are agreeing to the <a href="#">Acceptable Use Policy</a> for images.
-                <br/>
-                <button type="submit">Submit</button>
+        <form 
+            id="post-image"
+            method="POST" 
+            action="/posts/createPost"
+            enctype="multipart/form-data"
+        >
+
+        <label id="title-label">Title: </label>
+        <input 
+        id="post-title" 
+        type="text" 
+        placeholder="title" 
+        name ="title" required />
+
+        <br/>
+        
+        <label id="description-label">Description: </label>
+        <input 
+        id="description" 
+        type="text" 
+        placeholder="description" 
+        name="description" 
+        required />
+
+        <br/>
+        
+        <label id="upload-label">Choose image to upload: </label>
+        <input 
+        id="upload-image" 
+        type="file" 
+        name="uploadImage" required />
+
+        <br/>
+                
+        <input 
+        id="aup-agreement" 
+        type="checkbox" required>
+        by checking this you are agreeing to the <a href="#">Acceptable Use Policy</a> for images.
+        <br/>
+        <button type="submit" id="post-image-submit">Submit</button>
         </form>
     </div>
-</body>
+    </body>
 </html>
