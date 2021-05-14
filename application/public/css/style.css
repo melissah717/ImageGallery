@@ -125,7 +125,7 @@ p.card-title{
 #flash-message{
     position:absolute;
     left: 50%;
-    top: 20%;
+    top: 17%;
     transform: translate(-50%,0);
     z-index: 9999;
 
