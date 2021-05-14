@@ -113,7 +113,9 @@ router.post('/login', [
           console.log("this is the id "  + req.session.userId);
           res.locals.logged = true;
           req.flash('success', 'You have successfully logged in');
-          res.render("home");
+          req.session.save(err => {
+          res.redirect('/');
+          })
         } else {
           throw new UserError("Invalid username and/or password", "/login", 200);
         }
