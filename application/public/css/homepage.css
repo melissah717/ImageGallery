@@ -6,6 +6,6 @@
 
 .container{
     display: grid;
-    grid-area:auto;
+    grid-area: auto;
 }
 
