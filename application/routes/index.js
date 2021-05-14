@@ -4,7 +4,7 @@ var isLoggedIn = require('../middleware/routeprotectors').userIsLoggedIn;
 var { getRecentPosts, getPostById, getCommentsByPostId } = require('../middleware/postsmiddleware');
 var db = require('../config/database');
 
-/* GET home page. */
+
 router.get('/', getRecentPosts, function (req, res, next) {
   res.render('home');
 });

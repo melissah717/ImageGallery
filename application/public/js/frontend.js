@@ -9,7 +9,7 @@ function setFlashMessageFadeOut(flashMessageElement) {
             currentOpacity = currentOpacity - 0.05;
             flashMessageElement.style.opacity = currentOpacity;
         }, 10);
-    }, 2000);
+    }, 1000);
 }
 
 function addFlashFromFrontEnd(message) {

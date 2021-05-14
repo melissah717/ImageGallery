@@ -72,8 +72,8 @@ router.post('/register', [
           );
         } else {
           successPrint("User was created");
-          req.flash('success', 'User account has been made!');
           res.redirect('/login');
+          req.flash('success', 'User account has been made!');
         }
       })
       .catch((err) => {
@@ -110,9 +110,10 @@ router.post('/login', [
           successPrint(`User ${username} is logged in`);
           req.session.username = username;
           req.session.userId = loggedUserId;
+          console.log("this is the id "  + req.session.userId);
           res.locals.logged = true;
-          res.redirect('/');
           req.flash('success', 'You have successfully logged in');
+          res.render("home");
         } else {
           throw new UserError("Invalid username and/or password", "/login", 200);
         }
@@ -121,14 +122,14 @@ router.post('/login', [
         errorPrint("user login failed");
         if (err instanceof UserError) {
           errorPrint(err.getMessage());
-          res.redirect('/login');
           req.flash('error', err.getMessage());
+          res.redirect('/login');
           res.status(err.getStatus());
         } else {
           next(err);
         }
       })
-  }
+ }
 });
 
 router.post('/logout', (req, res, next) => {
