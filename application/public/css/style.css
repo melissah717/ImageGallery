@@ -53,10 +53,10 @@ form {
 } */
 
 #post-description{
-    padding: 2rem;
     font-family: Arial, Helvetica, sans-serif;
+    padding: 2px;
     color:#630030;
-    font-size: 12px;
+    font-size: 16px;
 
 }
 
@@ -80,6 +80,11 @@ form {
     font-family:Georgia, 'Times New Roman', Times, serif;
     margin: 2px;
     padding: 2px;
+}
+
+#brand-text{
+    font-size: 24px;
+    padding: 1px;
 }
 
 #logout-button{
@@ -120,7 +125,7 @@ p.card-title{
 #flash-message{
     position:absolute;
     left: 50%;
-    top: 18%;
+    top: 20%;
     transform: translate(-50%,0);
     z-index: 9999;
 
@@ -129,17 +134,10 @@ p.card-title{
 #flash-message  div{
     text-align: center;
     font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: 14px;
+    font-size: 16px;
     font-style: italic;
     color: #630030;
 
-}
-
-
-#count{
-    font-family: Arial;
-    color:rgb(250, 7, 47);
-    text-align: center;
 }
 
 .logo{
@@ -152,7 +150,7 @@ p.card-title{
     text-align: center;
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 12px;
+    padding: 14px;
     color:#630030;
 }
 
@@ -197,15 +195,13 @@ button{
 }
 
 .card{
-    padding: 1rem;
-    border: 6px double #9e7488;
-    margin: 5px;
+    padding: 2rem;
+    border: 6px double #ffffff;
 }
 
 .anchor-buttons{
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    text-decoration: none;
-    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
 }
 
 div[id=post-info] > p {
@@ -242,7 +238,7 @@ div[post-container] > imd[id^=post-]{
     border-radius: .25rem;
     justify-self: left;
     align-items: center;
-    border: 0.5px solid rgb(138, 130, 130);
+    border: 0.5px solid rgb(255, 255, 255);
     box-shadow: -1px 1px 2px 2px rgb(179, 178, 178);
     width: 100%;
     grid-template-areas:
@@ -287,7 +283,7 @@ div[id^=message-]{
 }
 
 #posted-user{
-    font-size: 16px;
+    font-size: 14px;
     font-family:Arial;
     margin: 0px;
     padding: 2px;
@@ -303,8 +299,9 @@ div[id^=message-]{
 }
 
 .image-title{
-    font-size: 40px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-variant: small-caps;
     align-items: left;
     padding: 10px;
     color:#630030;
@@ -315,6 +312,7 @@ div[id^=message-]{
     max-height: 80vh;
     grid-area: photoinfo;
     align-self:center;
+    border: 5px double #ffffff;
 }
 .author-text{
     grid-area: author;
@@ -329,6 +327,7 @@ div[id^=message-]{
     max-height: 50px;
     min-height: 50px;
     justify-self: start;
+    font-size: 12px;
 
 } 
 
@@ -352,6 +351,7 @@ div[id^=message-]{
     text-overflow: ellipsis;
     text-align:left; */
     width: 85%;
+    border: 0.05rem #ffffff;
 
 }
 
