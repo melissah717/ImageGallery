@@ -23,7 +23,7 @@ postMiddleware.getPostById = async function (req, res, next) {
             res.locals.currentPost = results[0];
             next();
         } else {
-            res.flash('error', 'this is not the post you are looking for');
+            res.flash('error', 'Post not found');
             res.redirect('/');
         }
     } catch (err) {

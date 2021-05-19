@@ -24,16 +24,16 @@ router.post('/create', (req, res, next) => {
                     res.json({
                         code: 1,
                         status: 'success',
-                        message: 'comment created',
+                        message: 'Comment created',
                         comment: comment,
                         username: username
                     })
                 } else {
-                    errorPrint('comment not created');
+                    errorPrint('Comment not created');
                     res.json({
                         code: -1,
                         status: 'danger',
-                        message: 'comment not created',
+                        message: 'Comment not created',
                     })
                 }
             })

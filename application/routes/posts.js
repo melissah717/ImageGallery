@@ -48,9 +48,9 @@ router.post('/createPost',
                 .then((postWasCreated) => {
                     if (postWasCreated) {
                         res.redirect('/');
-                        req.flash('success', 'your post was created successfully');
+                        req.flash('success', 'Your post was created successfully');
                     } else {
-                        throw new PostError('post could not be created', '/postimage', 200);
+                        throw new PostError('Post could not be created', '/postimage', 200);
                     }
                 })
                 .catch((err) => {
@@ -71,7 +71,7 @@ router.get('/search', async (req, res, next) => {
         let searchTerm = req.query.search;
         if (!searchTerm) {
             res.send({
-                message: "no search term given",
+                message: "No search term given",
                 results: []
             });
         } else {
