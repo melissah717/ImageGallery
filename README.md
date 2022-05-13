@@ -1,4 +1,4 @@
-# CSC 317 Term Project
+# Image Gallery App: https://youtu.be/pwZe2OoOhgg
 
 ## Purpose
 
